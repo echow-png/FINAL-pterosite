@@ -1,0 +1,208 @@
+:root {
+    --BG-gradient-1: bisque;
+    --BG-gradient-2: rgb(189, 233, 199);
+    --BG-gradient-3: rgb(180, 200, 234);
+    --col: 12;
+    --row: 20;
+}
+
+
+#landing {
+    overflow-x: hidden;
+
+}
+#landing img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 99vw;
+  pointer-events: none;
+  
+}
+
+@keyframes vert-shaking {
+ 0% { transform: translateY(0) }
+ 25% { transform: translateY(1px) }
+ 40% { transform: translateY(-1px) }
+ 50% { transform: translateY(2px) }
+ 100% { transform: translateY(0) }
+}
+
+.titlecard {
+  display: inline-block;
+  animation: vert-shaking 1.5s infinite;
+}
+
+@keyframes wiggle {
+   0% { transform: rotate(1deg); }
+   20% { transform: rotate(-1deg); }
+   40% { transform: rotate(1deg); }
+   100% { transform: rotate(1deg); }
+
+}
+
+.leafLeft {
+  transform-origin: left;
+  display: inline-block;
+  animation: wiggle 2.5s infinite;
+}
+
+.leafRight {
+  transform-origin: right;
+  display: inline-block;
+  animation: wiggle 1.8s infinite;
+}
+
+.grid-container {
+    /* background-color: rgb(236, 236, 212); */
+    display: grid;
+    width: 95vw;
+    height: 300vh;
+    grid-template-columns: repeat(var(--col), [col-start] 1fr, minmax(0, 1fr));
+    grid-template-rows: repeat(var(--row), [row-start] 1fr);
+    /* border: 2px solid rgb(165, 87, 87); */
+    gap: 4px;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    
+}
+
+canvas {
+  z-index: 15;
+  user-select: none;
+  pointer-events: none;
+}
+
+.dropshadow {
+    filter: drop-shadow(8px 80px 10px rgba(116, 92, 101, 0.614));
+    transition: transform 0.6s ease-in-out, filter 0.5s ease-in-out;
+
+}
+
+#timeline {
+    /* display: grid; */
+    /* position: static; */
+    /* margin: auto; */
+  
+
+    /* top: 0;
+    left: 0; */
+        width: 90vw;
+        height: 1vw;
+
+    z-index: -1; /* Place the canvas behind other content */
+    mix-blend-mode: multiply;
+        /* border: 0.1px solid black; */
+
+}
+
+
+body {
+    background-image: linear-gradient(to bottom, var(--BG-gradient-1) 30%,
+var(--BG-gradient-2) 50%, var(--BG-gradient-2)60%,
+var(--BG-gradient-3) 80%);
+/* margin: 0 auto; */
+        overflow-x: hidden;
+}
+
+
+
+.desc {
+    margin: auto;
+    max-width: 30vw;
+        /* border: 2px solid orange; */
+    /* min-height: 0; */
+        /* grid-area: overlap; */
+        user-select: 'text';
+    z-index: 10;
+
+font-family: "ohno-softie-variable", sans-serif;
+font-variation-settings: "wght" 300;
+letter-spacing: 0.075em;
+line-height: 1.3em;
+background-color: rgba(137, 43, 226, 0);
+border-radius: 3em;
+  padding: 1.5em;
+
+
+transition: font-size 0.5s ease-in-out, background-color 0.3s ease-in-out, max-width 0.5s ease-in-out;
+
+}
+
+.etymology {
+font-variation-settings: "wght" 500;
+font-size: 1.2em;
+margin: -0.8em auto 1em auto;
+color: rgba(134, 62, 78, 0.771);
+
+}
+
+.location, .wingspan {
+  color: rgb(98, 15, 58);
+  font-variation-settings: "wght" 400;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: block; /* keep layout stable */
+}
+
+.fact {
+  color: rgba(134, 62, 78, 0.771);
+
+  font-size: 75%;
+  line-height: 1.1em;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out, font-size 0.01s ease-in-out;
+
+}
+/* 
+@keyframes nameWiggle {
+  0% {font-variation-settings: "SEED" 0;}
+  50% {font-variation-settings: "SEED" 2;}
+} */
+
+.sciName {
+  font-family: "kuhlman-vf", sans-serif;
+/* font-variation-settings: "wdth" 100; */
+letter-spacing: 0.25em;
+line-height: 1.4em;
+color: rgb(98, 15, 58);
+}
+
+.desc:hover {
+  max-width: 50vw;
+  font-size: 150%;
+  background-color: rgba(245, 245, 220, 0.945);
+  border-radius: 3em;
+  padding: 1.5em;
+  /* position: absolute; */
+  z-index: 15;
+
+
+}
+
+.desc:hover > .dropshadow {
+transform: scale(2);
+filter: drop-shadow(6px 40px 6px rgba(170, 119, 119, 0.144));
+}
+
+.desc:hover .fact,
+.desc:hover .location,
+.desc:hover .wingspan {
+    /* background-color: aqua; */
+    opacity: 100;
+    transform: translateY(0);
+    display: block;
+}
+
+
+
+
+.ptero3D {
+        border: 2px solid rgb(95, 204, 166);
+            min-height: 0;
+            max-height: 30px;
+}

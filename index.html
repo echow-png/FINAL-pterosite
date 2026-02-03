@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+        <!-- In your HTML file, before your script that imports Three.js -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>    
+     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/jys1cur.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jys1cur.css">
+
+    <title>FINAL ptero</title>
+  </head>
+  <body>
+    <main>
+
+     <!-- <h1> ptero timeline </h1>   -->
+  <img src="titlepage/IMG_3895.PNG" alt="ptero silhouettes" style="width: 90vw; opacity: 0;">
+
+<div id="landing">
+  <img src="titlepage/IMG_3894.PNG" alt="ground" class="ground" style="top: -7vh;">
+  <img src="titlepage/IMG_3893.PNG" alt="sky">
+  <img src="titlepage/IMG_3895.PNG" alt="ptero silhouettes">
+  <img src="titlepage/IMG_3897.PNG" alt="leaf right" class="leafRight">  
+  <img src="titlepage/IMG_3896.PNG" alt="leaf left" class="leafLeft">
+  
+  <img src="titlepage/IMG_3898.PNG" alt="grass" class="grass" style="top: -7vh;">
+  <img src="titlepage/Untitled_Artwork.png" class="titlecard" style="width: 70vw; margin: 3vh 12vw">
+
+</div>
+
+<!-- <div class="fact"> bla blah pterodacty facts enjoy !!!</div> -->
+
+
+       <div id="timeline"></div>
+    <div class="grid-container">
+
+        <!-- <div class="ptero3D" style="grid-column: col-start 3; grid-row: 4;">ptero</div> -->
+
+<!-- // ptero 1 -->
+          <div class="desc" style="grid-column: col-start 2 / span 4; grid-row: 4 / span 2;">                          
+          <canvas class="dropshadow" id="lager" style="grid-column: col-start 2  / span 4; grid-row: 4 / span 2;"></canvas>
+          </div>
+
+<!-- // ptero 2 -->
+          <div class="desc" style="grid-column: col-start 4 / span 2; grid-row: 7 / span 2;"> <!-- // Lagerpeton -->                       
+          <canvas class="dropshadow" id="dimorpho" style="grid-column: col-start 4 / span 4; grid-row: 7 / span 3;"></canvas>
+          </div>
+
+<!-- = ptero 3 -->
+           <div class="desc" style="grid-column: col-start 1 / span 3; grid-row: 10 / span 2;">
+           <canvas class="dropshadow" id="rhampho" style="grid-column: col-start 2 / span 4; grid-row: 10 / span 3;"></canvas>
+           </div>
+
+
+          <div class="desc" style="grid-column: col-start 4 / span 4; grid-row: 12 / span 3;">
+           <canvas class="dropshadow" id="anuro"></canvas>
+           </div>
+
+
+          <div class="desc"></div>
+
+          <div class="desc"></div>
+          <div class="desc"></div>
+
+          <div class="desc"></div>
+          <div class="desc"></div>
+
+          <div class="desc"></div>
+          <div class="desc"></div>
+
+          <div class="desc"></div> 
+                   
+        <!-- //instead of creating new divs insert style and tags into existing desc divs -->
+
+        </main>
+            
+            //some way to simplify this pls
+      <script src="sketch.js" id="p5"></script>
+      <script type="module" src="/pteroJSfiles/lagerpeton.js"></script>
+      <script type="module" src="/pteroJSfiles/dimorphodon.js"></script>
+      <script type="module" src="/pteroJSfiles/rhamphorynchus.js"></script>
+      <script type="module" src="/pteroJSfiles/anurognathus.js"></script>
+
+      </div>
+
+
+</body>
+</html>
