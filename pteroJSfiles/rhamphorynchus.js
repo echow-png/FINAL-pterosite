@@ -51,8 +51,8 @@ scene.add(ptero);
 // Array(1).fill().forEach(addStar); //addSTar is a function
 
 //pointlight (color, strength, distance where 0 is infinte)
-const pointLight = new THREE.PointLight(0xD3EDE2, 950, 0);
-pointLight.position.set(1,2,23);
+const pointLight = new THREE.PointLight(0xD3EDE2, 990, 0);
+pointLight.position.set(1,2,20);
 
 const ambLight = new THREE.AmbientLight(0x667CC4, 3);
 

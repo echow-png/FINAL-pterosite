@@ -1,10 +1,9 @@
-// import { MultiplyBlending } from "three/src/constants.js";
+
 
 var divWidth;
 var divHeight;
 var notchCount = 18;
-var pteronamesJS = [];
-
+var pteroNames = [];
 let pteroCSV;
 let font;
 
@@ -76,7 +75,11 @@ window.addEventListener('scroll', () => {
   line(topX, topY, botX, botY);
   for (var i=0; i <= notchCount; i++) {
         line(topX-50, topY+i*(botY-topY)/notchCount, topX+50, topY+i*(botY-topY)/notchCount);
-        text(250-i*10+ ' MYA',topX-80,topY+i*(botY-topY)/notchCount);
+        push();
+          fill(134, 62, 78);
+          noStroke();
+          text(250-i*10+ ' MYA',topX-80,topY+i*(botY-topY)/notchCount);
+        pop();
   console.log(i);
   }
 
@@ -92,18 +95,18 @@ var factGet = pteroCSV.getColumn('Fact');
 var rowPlace = [0,0,0,0,0,6,7,8,8,9,9]
 var colPlace = [0,0,0,0,0,1,2,3,2,1,4]
 
-pteroNamesJS = [
-  "lager",
-  "dimorpho",
-  "rhampho",
-  "anuro",
-  "ptero",
+pteroNames = [
+  "lagerpeton",
+  "dimorphodon",
+  "rhamphorynchus",
+  "anurognathus",
+  "pterodactylus",
   "guidraco",
-  "pterano",
+  "pteranodon",
   "tapejara",
-  "nemi",
-  "quetzal",
-  "dsunga"
+  "nemicolopterus",
+  "quetzalcoatlus",
+  "dsungaripterus"
 ];
 // creates new desc divs for each new pterosaur
 // for (var i=5; i <= sciNameGet.length; i++) {
@@ -126,6 +129,17 @@ for (let j=0; j < sciNameGet.length; j++) {
 
   desc.style.gridRowEnd = "span 3";
   desc.style.gridColumnEnd = "span 4";
+
+
+      // <script type="module" src="./pteroJSfiles/lagerpeton.js"></script>
+var scriptDiv = document.getElementsByClassName("scripts")[0];
+
+for (let i = 0; i < sciNameGet.length; i++) {
+      var script = document.createElement('script');
+      script.type = "module";
+      script.src="./pteroJSfiles/"+pteroNames[i]+".js";
+      scriptDiv.appendChild(script);
+}
 
 
 //insert name as title
@@ -186,7 +200,6 @@ console.log(i);
 
 //ARRAY FOR LOCATION - customize each using list
 
-// desc.appendChild(div);
 
 
 

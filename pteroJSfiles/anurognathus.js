@@ -15,7 +15,7 @@ const renderer = new THREE.WebGLRenderer(
 
 renderer.setClearColor( 0x000000, 0 ); // the default
 
-var pteroSize = 4;
+var pteroSize = 5.75;
 
 renderer.setPixelRatio( window.devicePixelRatio );
 renderer.setSize(window.innerWidth/pteroSize, window.innerHeight/pteroSize);
