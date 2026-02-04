@@ -51,7 +51,7 @@ scene.add(ptero);
 // Array(1).fill().forEach(addStar); //addSTar is a function
 
 //pointlight (color, strength, distance where 0 is infinte)
-const pointLight = new THREE.PointLight(0xD3EDE2, 990, 0);
+const pointLight = new THREE.PointLight(0xD3EDE2, 1090, 0);
 pointLight.position.set(1,2,20);
 
 const ambLight = new THREE.AmbientLight(0x667CC4, 3);
@@ -97,8 +97,8 @@ let targetRotX = 0, targetRotY = 0;
   requestAnimationFrame (animate);
   renderer.render( scene, camera );
 
- targetRotY = mouseX * Math.PI * 0.1 + 1.4;  // left-right
-  targetRotX = mouseY * Math.PI * 0.3 -0.3;  // up-down
+ targetRotY = mouseX * Math.PI * 0.2 + 1.4;  // left-right
+  targetRotX = mouseY * Math.PI * 0.3 - 0.3;  // up-down
 
   // Smooth easing
   ptero.rotation.y += (targetRotY - ptero.rotation.y) * pteroSize/10;

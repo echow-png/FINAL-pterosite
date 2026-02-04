@@ -54,7 +54,7 @@ scene.add(ptero);
 const pointLight = new THREE.PointLight(0xD3EDE2, 950, 0);
 pointLight.position.set(1,2,23);
 
-const ambLight = new THREE.AmbientLight(0x9385D4, 4);
+const ambLight = new THREE.AmbientLight(0x9385D4, 3.3);
 
 scene.add(pointLight, ambLight); //, pLightHelper
 

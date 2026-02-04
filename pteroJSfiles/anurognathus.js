@@ -47,7 +47,7 @@ ptero.rotation.set (0,0,0);
 scene.add(ptero);
 
 //pointlight (color, strength, distance where 0 is infinte)
-const pointLight = new THREE.PointLight(0xD3EDE2, 850, 0);
+const pointLight = new THREE.PointLight(0xD3EDE2, 950, 0);
 pointLight.position.set(1,2,23);
 
 const ambLight = new THREE.AmbientLight(0xED66BC, 3);
